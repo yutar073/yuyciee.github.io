@@ -1,367 +1,160 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <!--Theme is ning by ning0818. See https://github.com/ning0818/hexo-theme-ning-->
-    <link href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
-    <link rel="shortcut icon" href="https://www.yuanning0818.tk/logo.png" type="image/x-icon">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <link rel="stylesheet" class="nightmode" href="/assets/css/main.css">
-    <link rel="stylesheet" href="https://npm.elemecdn.com/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <script async src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js"></script>
-    <link rel="stylesheet" class="nightmode" href="/css/style.css">
-    <link rel="stylesheet" class="nightmode" href="/css/plugin.css">
-    <script src="/js/pandown.js"></script>
-<meta name="generator" content="Hexo 6.3.0"></head>
-    <body>
-        <div class="container">
-            <body class="no-touch">
-    <div id="app" class="App affix App--index" style="min-height: 744px;" aria-hidden="false">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>时间轴 | yuyc's blog</title><meta name="author" content="yuyc"><meta name="copyright" content="yuyc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="时间轴">
+<meta property="og:url" content="https://yuyciee.github.io/archives/index.html">
+<meta property="og:site_name" content="yuyc&#39;s blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuyciee.github.io/img/luoguavatar.png">
+<meta property="article:author" content="yuyc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuyciee.github.io/img/luoguavatar.png"><link rel="shortcut icon" href="/img/luoguavatar.png"><link rel="canonical" href="https://yuyciee.github.io/archives/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '时间轴',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-09-03 17:23:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-        <div id="app-navigation" class="App-navigation">
-            <div class="Navigation ButtonGroup App-backControl"><button class="Button Button--icon Navigation-drawer hasIcon" type="button" aria-label="打开导航抽屉"><i aria-hidden="true" class="icon fas fa-bars Button-icon"></i><span class="Button-label"></span></button></div>
-        </div>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-        <div id="drawer" class="App-drawer">
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
-            <header id="header" class="App-header navbar-fixed-top">
-                <div id="header-navigation" class="Header-navigation">
-                    <div class="Navigation ButtonGroup"></div>
-                </div>
-                <div class="container">
-                    <div class="Header-title">
-                        <a href="/" id="home-link">
-                            <!--顶栏logo-->
-                            <img src="https://www.yuanning0818.tk/logo.png" alt="首页" class="Header-logo">
-                            <!--顶栏logo end-->
-                        </a>
-                    </div>
-                    <div id="header-primary" class="Header-primary">
-                        <ul class="Header-controls">
-                            <!--顶栏内容-->
-                            
-                            <li class="item-link4">
-                                <a class="LinksButton Button Button--link active" href="/">
-                                    <!--<i aria-hidden="true" class="icon fas fa-home Button-icon LinksButton-icon"></i>-->
-                                    <span class="LinksButton-title">首页</span>
-                                </a>
-                            </li>
-                            
-                            <li class="item-link4">
-                                <a class="LinksButton Button Button--link active" href="/tags/">
-                                    <!--<i aria-hidden="true" class="icon fas fa-home Button-icon LinksButton-icon"></i>-->
-                                    <span class="LinksButton-title">标签</span>
-                                </a>
-                            </li>
-                            
-                            <!--顶栏内容 end-->
-                        </ul>
-                    </div>
-                    <div id="header-secondary" class="Header-secondary">
-                        <ul class="Header-controls">
-                            
-                                
-                                <li class="item-nightmode">
-                                    <button class="Button Button--flat hasIcon" type="button">
-                                        <a href="/">
-                                        <i aria-hidden="true" class="bi bi-house-door"></i>
-                                        <span class="Button-label">首页</span>
-                                        </a>
-                                    </button>
-                                </li>
-                            
-                                
-                                <li class="item-nightmode">
-                                    <button class="Button Button--flat hasIcon" type="button">
-                                        <a target="_blank" rel="noopener" href="https://github.com/ning0818/">
-                                        <i aria-hidden="true" class="bi bi-github"></i>
-                                        <span class="Button-label">Github</span>
-                                        </a>
-                                    </button>
-                                </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </header>
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-        </div>
-            <title>yuyc&#39;s blog</title>
-<main class="App-content">
-    <div id="content">
-        <div class="IndexPage">
-            <div class="container">
-                <div class="sideNavContainer">
-                    <nav class="IndexPage-nav sideNav">
-                        <ul>
-                            <li class="item-nav">
-                                <div class="ButtonGroup Dropdown dropdown App-titleControl Dropdown--select itemCount12"><button class="Dropdown-toggle Button" aria-haspopup="menu" aria-label="导航栏下拉菜单开关" data-toggle="dropdown"><span class="Button-label">全部主题</span><i aria-hidden="true" class="icon fas fa-sort Button-caret"></i></button>
-                                    <ul class="Dropdown-menu dropdown-menu ">
-                                        
-                                            
-                                            <li class="item-allDiscussions active">
-                                                <a class="hasIcon" href="/" active="true">
-                                                    <i aria-hidden="true" class="bi bi-house-door"></i>
-                                                    <span class="Button-label">首页</span>
-                                                </a>
-                                            </li>
-                                        
-                                            
-                                            <li class="item-allDiscussions active">
-                                                <a class="hasIcon" href="/atom.xml" active="true">
-                                                    <i aria-hidden="true" class="bi bi-rss"></i>
-                                                    <span class="Button-label">rss</span>
-                                                </a>
-                                            </li>
-                                        
-                                            
-                                            <li class="item-allDiscussions active">
-                                                <a class="hasIcon" href="/moments/" active="true">
-                                                    <i aria-hidden="true" class="bi bi-share"></i>
-                                                    <span class="Button-label">朋友圈</span>
-                                                </a>
-                                            </li>
-                                        
-                                        <li class="Dropdown-separator"></li>
-                                        <hr>
-                                        
-                                            
-                                            <li class="item-tag1">
-                                                <a class="TagLinkButton hasIcon" href="/link/" title="友人帐" style="--color: #00b7ff;">
-                                                    <i class="bi bi-people-fill" style="--color: #00b7ff; color: rgb(0, 183, 255);"></i>
-                                                    <span class="Button-label">友人帐</span>
-                                                </a>
-                                            </li>
-                                        
-                                            
-                                            <li class="item-tag1">
-                                                <a class="TagLinkButton hasIcon" href="/atom.xml" title="rss" style="--color: #00b7ff;">
-                                                    <i class="bi bi-rss" style="--color: #00b7ff; color: rgb(0, 183, 255);"></i>
-                                                    <span class="Button-label">rss</span>
-                                                </a>
-                                            </li>
-                                        
-                                            
-                                            <li class="item-tag1">
-                                                <a class="TagLinkButton hasIcon" href="/moments/" title="朋友圈" style="--color: #00b7ff;">
-                                                    <i class="bi bi-share" style="--color: #00b7ff; color: rgb(0, 183, 255);"></i>
-                                                    <span class="Button-label">朋友圈</span>
-                                                </a>
-                                            </li>
-                                        
-                                            
-                                            <li class="item-tag1">
-                                                <a class="TagLinkButton hasIcon" href="/fcircle/" title="文坛" style="--color: #00b7ff;">
-                                                    <i class="bi bi-people" style="--color: #00b7ff; color: rgb(0, 183, 255);"></i>
-                                                    <span class="Button-label">文坛</span>
-                                                </a>
-                                            </li>
-                                        
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="item-startBottomWidgetSection">
-                                <div class="AfruxWidgets-startBottom AfruxWidgets-WidgetSection"></div>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="IndexPage-results sideNavOffset">
-                        <div class="DiscussionList">
-                            <ul role="feed" class="DiscussionList-discussions">
-                                
-                                <li data-id="193" role="article" aria-setsize="-1" aria-posinset="0">
-                                    <div class="DiscussionListItem"><span class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i aria-hidden="true" class="icon fas fa-check"></i></span>
-                                        <div class="DiscussionListItem-content Slidable-content read"><a class="DiscussionListItem-author" href="/about/" title="" aria-label="yuyc&#39;s blog 发布于 3 天前" data-original-title="yuyc&#39;s blog 发布于 3 天前"><img class="Avatar" loading="lazy" src="https://www.yuanning0818.tk/logo.png" alt=""></a><a href="/2023/09/03/test/" class="DiscussionListItem-main">
-                                                <h2 class="DiscussionListItem-title">test</h2>
-                                                <ul class="DiscussionListItem-info">
-                                                    <!--<li class="item-tags"><span class="TagsLabel"><span class="TagLabel  colored text-contrast--dark" style="--tag-bg: #ff9500;"><span class="TagLabel-text"><span class="TagLabel-name">讨论</span></span></span></span></li>-->
-                                                    <hr>
-                                                    <!--<li class="item-discussion-views"><span>20</span></li>-->
-                                                    <li class="item-excerpt">
-                                                        <div>2023-09-03</div>
-                                                    </li>
-                                                </ul>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <li data-id="193" role="article" aria-setsize="-1" aria-posinset="0">
-                                    <div class="DiscussionListItem"><span class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i aria-hidden="true" class="icon fas fa-check"></i></span>
-                                        <div class="DiscussionListItem-content Slidable-content read"><a class="DiscussionListItem-author" href="/about/" title="" aria-label="yuyc&#39;s blog 发布于 3 天前" data-original-title="yuyc&#39;s blog 发布于 3 天前"><img class="Avatar" loading="lazy" src="https://www.yuanning0818.tk/logo.png" alt=""></a><a href="/2023/09/03/hello-world/" class="DiscussionListItem-main">
-                                                <h2 class="DiscussionListItem-title">Hello World</h2>
-                                                <ul class="DiscussionListItem-info">
-                                                    <!--<li class="item-tags"><span class="TagsLabel"><span class="TagLabel  colored text-contrast--dark" style="--tag-bg: #ff9500;"><span class="TagLabel-text"><span class="TagLabel-name">讨论</span></span></span></span></li>-->
-                                                    <hr>
-                                                    <!--<li class="item-discussion-views"><span>20</span></li>-->
-                                                    <li class="item-excerpt">
-                                                        <div>2023-09-03</div>
-                                                    </li>
-                                                </ul>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="AfruxWidgets-sideNavAlt AfruxWidgets-WidgetSection">
-    <div class="AfruxWidgets-Widget welcomebox-widget">
-        <div class="AfruxWidgets-Widget-content">
-            <div class="containerwb">
-                <div class="backgrwb">
-                    <div><a href="/">
-                            <div class="avatarwb">
-                                <div class="AvatarEditor Dropdown">
-                                    <!--侧栏logo-->
-                                    <img loading="eager" class="Avatar" src="https://www.yuanning0818.tk/logo.png" alt="">
-                                    <!--侧栏logo end-->
-                                    <ul class="Dropdown-menu Menu">
-                                        <li class="item-upload"><button class="hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-upload Button-icon"></i><span class="Button-label">上传</span></button></li>
-                                        <li class="item-remove"><button class="hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label">移除</span></button></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a></div>
-                    <div class="contentwb">
-                        <div class="textinfo"><strong><span class="username">yuyc&#39;s blog</span></strong></div>
-                        <div class="cont">
-                            <div class="circletop">
-                                
-                                    
-                                    <a href="/about/" title="关于">
-                                        <i class="bi bi-file-earmark-person-fill"></i>
-                                    </a>
-                                
-                                    
-                                    <a href="/about/" title="Github">
-                                        <i class="bi bi-github"></i>
-                                    </a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="iconbadge"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-        <div class="AfruxWidgets-Widget Afrux-ForumStatsWidgetWidget">
-            <div class="AfruxWidgets-Widget-title">
-                <span class="AfruxWidgets-Widget-title-icon">
-                    <i aria-hidden="true" class="bi bi-bell-fill"></i>
-                </span>
-                <span class="AfruxWidgets-Widget-title-label">公告</span>
-                <div class="AfruxWidgets-Widget-title-desc">
-                </div>
-            </div>
-            <div class="AfruxWidgets-Widget-content">
-                <p>这是一个公告</p>
-            </div>
-        </div>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-    <div class="AfruxWidgets-Widget Afrux-ForumStatsWidgetWidget">
-        <div class="AfruxWidgets-Widget-title">
-            <span class="AfruxWidgets-Widget-title-icon">
-                <i aria-hidden="true" class="bi bi-alexa"></i>
-            </span>
-            <span class="AfruxWidgets-Widget-title-label">统计</span>
-            <div class="AfruxWidgets-Widget-title-desc">
-            </div>
-        </div>
-        <div class="AfruxWidgets-Widget-content">
-            <div class="Afrux-ForumStatsWidget-grid">
-                    <p>访客数<span id="busuanzi_value_site_uv"></span>人</p>
-                    <p>访问量<span id="busuanzi_value_site_pv"></span>次</p>
-        </div>
-    </div>
-</div>
-<div class="AfruxWidgets-bottomWidgetSection AfruxWidgets-WidgetSection"></div>
-
-                </div>
-            </div>
-        </div>
-
-    <div id="flarum-loading" style="display: none;">
-        正在加载…
-    </div>
-
-    <noscript>
-        <div class="Alert">
-            <div class="container">
-                请使用更现代的浏览器并启用 JavaScript 以获得最佳浏览体验。
-            </div>
-        </div>
-    </noscript>
-
-    <div class="App-composer">
-        <div class="container">
-            <div id="composer">
-                <div class="Composer " style="display: none; bottom: -300px; height: 300px;">
-                    <div class="Composer-handle" style="cursor: row-resize;"></div>
-                    <ul class="Composer-controls">
-                        <li class="item-minimize App-backControl"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="最小化" itemclassname="App-backControl"><i aria-hidden="true" class="icon fas fa-minus minimize Button-icon"></i><span class="Button-label"></span></button></li>
-                        <li class="item-fullScreen"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="全屏"><i aria-hidden="true" class="icon fas fa-expand Button-icon"></i><span class="Button-label"></span></button></li>
-                        <li class="item-close"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="关闭"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label"></span></button></li>
-                    </ul>
-                    <div class="Composer-content"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-</div>
-
-    <div class="posts-ls cm9 c9 p9 m12">
-    <div class="btns" style="margin: auto;width: min-content;">
-        
-        <div class="btn"> 1 </div>
-        
-    </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-            <hr>
-<div>
-    
-<!--这里是靠左的底栏-->
-<a href="https://icp.gov.moe/?keyword=20221982" target="_blank">萌ICP备20221982号</a>
-
-</div>
-<div style="text-align: right;">
-
-<!--这里是靠右的底栏-->
-<p>Theme is <a target="_blank" rel="noopener" href="https://github.com/ning0818/hexo-theme-ning">Ning</a> By <a target="_blank" rel="noopener" href="https://www.yuanning0818.tk">Ning0818</a></p>
-<p>Powerd By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></p>
-
-
-</div>
-        </div>
-    </body>
-    </html> 
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/luoguavatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="yuyc's blog"><span class="site-name">yuyc's blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">时间轴</h1></div></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">文章总览 - 2</div><div class="article-sort"><div class="article-sort-item year">2023</div><div class="article-sort-item"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-09-03T06:04:30.000Z" title="发表于 2023-09-03 14:04:30">2023-09-03</time></div><a class="article-sort-item-title" href="/2023/09/03/test/" title="test">test</a></div></div><div class="article-sort-item"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-09-03T05:55:45.760Z" title="发表于 2023-09-03 13:55:45">2023-09-03</time></div><a class="article-sort-item-title" href="/2023/09/03/hello-world/" title="Hello World">Hello World</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/luoguavatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">yuyc</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2023/09/03/test/" title="test">test</a><time datetime="2023-09-03T06:04:30.000Z" title="发表于 2023-09-03 14:04:30">2023-09-03</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/09/03/hello-world/" title="Hello World">Hello World</a><time datetime="2023-09-03T05:55:45.760Z" title="发表于 2023-09-03 13:55:45">2023-09-03</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/test/" style="font-size: 1.1em; color: #999">test</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-09-03T09:23:55.919Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By yuyc</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
